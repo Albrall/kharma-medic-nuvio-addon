@@ -1,6 +1,15 @@
 {
   "streams": [
     {
+      "name": "Direct MP4 720p ⚡\nXbox & iPad",
+      "title": "⚡ بث مباشر فوري بدون تقطيع — 12 ساعة كاملة (720p HD)\nREAL TIME study with me (no music): 12 HOUR Productive Pomodoro Session",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v1.0-media/kharma_12h_720p.mp4",
+      "behaviorHints": {
+        "filename": "KharmaMedic.StudyWithMe.12Hours.720p.H264.AAC.mp4",
+        "videoSize": 1259496847
+      }
+    },
+    {
       "name": "Nuvio Player\nYouTube HD",
       "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (12h 01m)\nREAL TIME study with me (no music): 12 HOUR Productive Pomodoro Session | KharmaMedic",
       "ytId": "A_BjvkJOetA"
