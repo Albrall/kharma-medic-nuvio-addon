@@ -1,0 +1,39 @@
+{
+  "id": "com.kharmamedic.studywithme",
+  "version": "1.0.0",
+  "name": "Kharma Medic — Study With Me",
+  "description": "جميع جلسات المذاكرة بالوقت الفعلي (Real Time Study With Me - Pomodoro) لقناة Kharma Medic جاهزة للتشغيل على Nuvio.",
+  "logo": "https://yt3.googleusercontent.com/ytc/AIdro_nX_iJMKECaF3eGa4F38RwjfSWH39a1k0S2Tnk4Qhi6iLo=s900-c-k-c0x00ffffff-no-rj",
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "types": [
+    "movie"
+  ],
+  "idPrefixes": [
+    "km_"
+  ],
+  "catalogs": [
+    {
+      "type": "movie",
+      "id": "kharma_all",
+      "name": "Kharma Medic — Study With Me (الكل)"
+    },
+    {
+      "type": "movie",
+      "id": "kharma_short_med",
+      "name": "Study With Me — جلسات 1 إلى 5 ساعات"
+    },
+    {
+      "type": "movie",
+      "id": "kharma_long",
+      "name": "Study With Me — جلسات مطولة 6 إلى 12 ساعة"
+    }
+  ],
+  "behaviorHints": {
+    "adult": false,
+    "p2p": false
+  }
+}

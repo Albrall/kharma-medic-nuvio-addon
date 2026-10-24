@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "id": "km_qIxx7ffhPy0",
+    "type": "movie",
+    "name": "5 Hour Study With Me (Classic)",
+    "poster": "https://i.ytimg.com/vi/qIxx7ffhPy0/maxresdefault.jpg",
+    "posterShape": "landscape",
+    "background": "https://i.ytimg.com/vi/qIxx7ffhPy0/maxresdefault.jpg",
+    "description": "⏱️ المدة: 5h 15m | بدون موسيقى (No Music)\n\nجلسة مذاكرة لمدة 5 ساعات بنظام بومودورو (50/10) بدون موسيقى.\n\nالعنوان الأصلي:\nREAL TIME study with me (no music): 5 HOUR Productive Pomodoro Session | KharmaMedic",
+    "releaseInfo": "2021 • 5h 15m",
+    "runtime": "315 min",
+    "genres": [
+      "Study With Me",
+      "Pomodoro",
+      "No Music"
+    ],
+    "director": [
+      "Nasir Kharma (Kharma Medic)"
+    ],
+    "cast": [
+      "Kharma Medic"
+    ],
+    "links": [
+      {
+        "name": "Kharma Medic YouTube",
+        "category": "Channel",
+        "url": "https://www.youtube.com/@KharmaMedic"
+      }
+    ]
+  }
+}

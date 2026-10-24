@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "id": "km_A_BjvkJOetA",
+    "type": "movie",
+    "name": "12 Hour Study With Me (Pomodoro 50/10)",
+    "poster": "https://i.ytimg.com/vi/A_BjvkJOetA/maxresdefault.jpg",
+    "posterShape": "landscape",
+    "background": "https://i.ytimg.com/vi/A_BjvkJOetA/maxresdefault.jpg",
+    "description": "⏱️ المدة: 12h 01m | بدون موسيقى (No Music)\n\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).\n\nالعنوان الأصلي:\nREAL TIME study with me (no music): 12 HOUR Productive Pomodoro Session | KharmaMedic",
+    "releaseInfo": "2022 • 12h 01m",
+    "runtime": "721 min",
+    "genres": [
+      "Study With Me",
+      "Pomodoro",
+      "No Music"
+    ],
+    "director": [
+      "Nasir Kharma (Kharma Medic)"
+    ],
+    "cast": [
+      "Kharma Medic"
+    ],
+    "links": [
+      {
+        "name": "Kharma Medic YouTube",
+        "category": "Channel",
+        "url": "https://www.youtube.com/@KharmaMedic"
+      }
+    ]
+  }
+}

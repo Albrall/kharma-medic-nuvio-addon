@@ -1,0 +1,10 @@
+{
+  "name": "kharma-medic-nuvio-addon",
+  "version": "1.0.0",
+  "description": "Nuvio / Stremio Addon for Kharma Medic Real-Time Study With Me videos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}

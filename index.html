@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kharma Medic — Study With Me | Nuvio Addon</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: #131a2a;
+      --surface-hover: #1b2438;
+      --border: #25314d;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --success: #22c55e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, Arial, sans-serif;
+      background: radial-gradient(circle at top, #16213e 0%, var(--bg) 60%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1.25rem 4rem;
+      line-height: 1.65;
+    }
+    .container { max-width: 980px; margin: 0 auto; }
+    .hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      margin-bottom: 2rem;
+    }
+    .hero-top { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+    .logo { width: 76px; height: 76px; border-radius: 50%; border: 2px solid var(--primary); object-fit: cover; }
+    .hero-title h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .hero-title p { color: var(--muted); font-size: 0.96rem; }
+    .install-box {
+      background: #090d16;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .install-label { font-size: 0.9rem; color: var(--primary); font-weight: 600; }
+    .url-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    input.manifest-input {
+      flex: 1;
+      min-width: 240px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 0.88rem;
+      direction: ltr;
+    }
+    .btn {
+      cursor: pointer;
+      border: none;
+      padding: 0.75rem 1.3rem;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { background: var(--surface-hover); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); gap: 1.15rem; margin-top: 1rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .thumb-wrap { position: relative; aspect-ratio: 16 / 9; background: #000; }
+    .thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .badge {
+      position: absolute; bottom: 8px; left: 8px;
+      background: rgba(11, 15, 25, 0.88); color: #fff;
+      font-size: 0.76rem; padding: 0.2rem 0.55rem; border-radius: 6px; direction: ltr;
+    }
+    .card-body { padding: 0.95rem 1rem 1.1rem; }
+    .card-body h3 { font-size: 0.98rem; margin-bottom: 0.4rem; direction: ltr; text-align: right; }
+    .card-body p { font-size: 0.84rem; color: var(--muted); }
+    .toast { color: var(--success); font-size: 0.86rem; display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="hero-top">
+        <img class="logo" src="https://yt3.googleusercontent.com/ytc/AIdro_nX_iJMKECaF3eGa4F38RwjfSWH39a1k0S2Tnk4Qhi6iLo=s900-c-k-c0x00ffffff-no-rj" alt="Kharma Medic" />
+        <div class="hero-title">
+          <h1>إضافة Kharma Medic — Study With Me لتطبيق Nuvio</h1>
+          <p>تضم جميع جلسات Real-Time Pomodoro (من ساعة واحدة حتى 12 ساعة بدون موسيقى) مرتبة وجاهزة للتشغيل على Nuvio.</p>
+        </div>
+      </div>
+      <div class="install-box">
+        <span class="install-label">رابط التثبيت في Nuvio (Settings → Content & Discovery → Addons → Add Addon):</span>
+        <div class="url-row">
+          <input id="manifestUrl" class="manifest-input" type="text" readonly value="" />
+          <button class="btn btn-primary" onclick="copyManifest()">📋 نسخ رابط Manifest</button>
+          <a class="btn btn-outline" href="./manifest.json" target="_blank">فتح manifest.json</a>
+        </div>
+        <span id="copyToast" class="toast">✅ تم النسخ! ألصقه الآن في تطبيق Nuvio.</span>
+      </div>
+    </div>
+    <h2>📚 الجلسات المتوفرة (17 جلسة)</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/A_BjvkJOetA/maxresdefault.jpg" alt="12 Hour Study With Me (Pomodoro 50/10)" loading="lazy" />
+          <span class="badge">2022 • 12h 01m</span>
+        </div>
+        <div class="card-body">
+          <h3>12 Hour Study With Me (Pomodoro 50/10)</h3>
+          <p>جلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/fJP7c8xt1n4/maxresdefault.jpg" alt="10 Hour Study With Me (Pomodoro 50/10)" loading="lazy" />
+          <span class="badge">2020 • 10h 01m</span>
+        </div>
+        <div class="card-body">
+          <h3>10 Hour Study With Me (Pomodoro 50/10)</h3>
+          <p>جلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/1Z33r0rOlNc/hqdefault.jpg" alt="8 Hour Study With Me (+ Bonus Pomodoro)" loading="lazy" />
+          <span class="badge">2022 • 8h 53m</span>
+        </div>
+        <div class="card-body">
+          <h3>8 Hour Study With Me (+ Bonus Pomodoro)</h3>
+          <p>جلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/cPTRA1gIWak/maxresdefault.jpg" alt="7 Hour Study With Me (Pomodoro 50/10)" loading="lazy" />
+          <span class="badge">2020 • 7h 02m</span>
+        </div>
+        <div class="card-body">
+          <h3>7 Hour Study With Me (Pomodoro 50/10)</h3>
+          <p>جلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/V3DNjGB27Go/hqdefault.jpg" alt="6 Hour Study With Me #1 (6h 46m)" loading="lazy" />
+          <span class="badge">2021 • 6h 46m</span>
+        </div>
+        <div class="card-body">
+          <h3>6 Hour Study With Me #1 (6h 46m)</h3>
+          <p>جلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/H_wpady4dh4/maxresdefault.jpg" alt="6 Hour Study With Me #2 (6h 10m)" loading="lazy" />
+          <span class="badge">2022 • 6h 10m</span>
+        </div>
+        <div class="card-body">
+          <h3>6 Hour Study With Me #2 (6h 10m)</h3>
+          <p>جلسة مذاكرة لمدة 6 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10).</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/jnOIlmmVraE/maxresdefault.jpg" alt="5 Hour Study With Me (2024 Edition)" loading="lazy" />
+          <span class="badge">2024 • 5h 44m</span>
+        </div>
+        <div class="card-body">
+          <h3>5 Hour Study With Me (2024 Edition)</h3>
+          <p>جلسة مذاكرة حديثة لمدة 5 ساعات و44 دقيقة بدون موسيقى بنظام بومودورو مع د. ناصر.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/qIxx7ffhPy0/maxresdefault.jpg" alt="5 Hour Study With Me (Classic)" loading="lazy" />
+          <span class="badge">2021 • 5h 15m</span>
+        </div>
+        <div class="card-body">
+          <h3>5 Hour Study With Me (Classic)</h3>
+          <p>جلسة مذاكرة لمدة 5 ساعات بنظام بومودورو (50/10) بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/Dx0Cko4e5Bk/maxresdefault.jpg" alt="4 Hour Study With Me (Aug 2024 Edition)" loading="lazy" />
+          <span class="badge">2024 • 4h 44m</span>
+        </div>
+        <div class="card-body">
+          <h3>4 Hour Study With Me (Aug 2024 Edition)</h3>
+          <p>أحدث جلسات Study With Me من Kharma Medic (أغسطس 2024) — 4 ساعات بومودورو (50/10) بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/XBo0H5Rn17s/maxresdefault.jpg" alt="4 Hour Study With Me (2022 Edition)" loading="lazy" />
+          <span class="badge">2022 • 4h 34m</span>
+        </div>
+        <div class="card-body">
+          <h3>4 Hour Study With Me (2022 Edition)</h3>
+          <p>جلسة مذاكرة 4 ساعات ونصف بدون موسيقى بنظام بومودورو (50/10).</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/iQ8_E9xZQg0/maxresdefault.jpg" alt="4 Hour Study With Me (Classic Block)" loading="lazy" />
+          <span class="badge">2020 • 4h 02m</span>
+        </div>
+        <div class="card-body">
+          <h3>4 Hour Study With Me (Classic Block)</h3>
+          <p>جلسة الـ 4 ساعات الكلاسيكية الأشهر من Kharma Medic بنظام بومودورو (50/10) بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/Qe2Uw2dbq7A/maxresdefault.jpg" alt="3 Hour Study With Me (2024 Edition)" loading="lazy" />
+          <span class="badge">2024 • 3h 25m</span>
+        </div>
+        <div class="card-body">
+          <h3>3 Hour Study With Me (2024 Edition)</h3>
+          <p>جلسة مذاكرة مركزة لمدة 3 ساعات ونصف (نسخة 2024) بدون موسيقى بنظام بومودورو.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/qND2ScWE1e4/maxresdefault.jpg" alt="3 Hour Study With Me (Classic)" loading="lazy" />
+          <span class="badge">2021 • 3h 17m</span>
+        </div>
+        <div class="card-body">
+          <h3>3 Hour Study With Me (Classic)</h3>
+          <p>جلسة مذاكرة لمدة 3 ساعات بنظام بومودورو (50/10) بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/R8FRmElERig/maxresdefault.jpg" alt="2.5 Hour Study With Me (Pomodoro)" loading="lazy" />
+          <span class="badge">2019 • 2h 32m</span>
+        </div>
+        <div class="card-body">
+          <h3>2.5 Hour Study With Me (Pomodoro)</h3>
+          <p>جلسة مذاكرة لمدة ساعتين ونصف بنظام بومودورو مع أصوات المكتب الطبيعية بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/yyqQJD1PMrA/maxresdefault.jpg" alt="2 Hour Study With Me (Live Med Exam)" loading="lazy" />
+          <span class="badge">2020 • 2h 18m</span>
+        </div>
+        <div class="card-body">
+          <h3>2 Hour Study With Me (Live Med Exam)</h3>
+          <p>جلسة تركيز قصوى لمدة ساعتين بالوقت الفعلي أثناء تقديم اختبار كلية الطب بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/m23k_wS4umU/maxresdefault.jpg" alt="2 Hour Study With Me (Pomodoro)" loading="lazy" />
+          <span class="badge">2020 • 2h 08m</span>
+        </div>
+        <div class="card-body">
+          <h3>2 Hour Study With Me (Pomodoro)</h3>
+          <p>جلسة مذاكرة خفيفة لمدة ساعتين بنظام بومودورو بدون موسيقى.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb-wrap">
+          <img src="https://i.ytimg.com/vi/m5HqaG9TnDk/maxresdefault.jpg" alt="1 Hour Power Session (No Breaks)" loading="lazy" />
+          <span class="badge">2021 • 1h 09m</span>
+        </div>
+        <div class="card-body">
+          <h3>1 Hour Power Session (No Breaks)</h3>
+          <p>ساعة قوة وتركيز متواصل بدون فواصل (Power Hour) وبدون موسيقى لإنجاز المهام السريعة.</p>
+        </div>
+      </div></div>
+  </div>
+  <script>
+    const base = window.location.href.replace(/\/index\.html.*$/, "").replace(/\/+$/, "");
+    document.getElementById("manifestUrl").value = base + "/manifest.json";
+    function copyManifest() {
+      const input = document.getElementById("manifestUrl");
+      input.select();
+      navigator.clipboard.writeText(input.value);
+      const t = document.getElementById("copyToast");
+      t.style.display = "inline";
+      setTimeout(() => t.style.display = "none", 3500);
+    }
+  </script>
+</body>
+</html>
