@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "methods": ["OPTIONS"],
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(tb|configure|status)(/.*)?",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/stream/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/manifest\\.json",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/([^/]+)/(manifest\\.json|configure|status|catalog/.*|meta/.*|stream/.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
+}
