@@ -1,25 +1,12 @@
 {
   "streams": [
     {
-      "name": "Direct 1080p ⚡\nالجزء 1/2",
-      "title": "⚡ 1080p Full HD — الجزء 1 من 2 (الساعات 00:00 إلى 03:23 • 1.17 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
-      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_V3DNjGB27Go_1080p_part1.mp4",
+      "name": "Direct 1080p ⚡\nXbox & iPad",
+      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (6h 46m • 2.41 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
+      "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_V3DNjGB27Go.m3u8",
       "behaviorHints": {
         "notWebReady": false,
-        "bingeGroup": "kharma-1080p-V3DNjGB27Go",
-        "filename": "kharma_V3DNjGB27Go_1080p_part1.mp4",
-        "videoSize": 1259538597
-      }
-    },
-    {
-      "name": "Direct 1080p ⚡\nالجزء 2/2",
-      "title": "⚡ 1080p Full HD — الجزء 2 من 2 (الساعات 03:23 إلى 06:46 • 1.24 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
-      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_V3DNjGB27Go_1080p_part2.mp4",
-      "behaviorHints": {
-        "notWebReady": false,
-        "bingeGroup": "kharma-1080p-V3DNjGB27Go",
-        "filename": "kharma_V3DNjGB27Go_1080p_part2.mp4",
-        "videoSize": 1326087803
+        "bingeGroup": "kharma-1080p-V3DNjGB27Go"
       }
     },
     {

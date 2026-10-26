@@ -2,7 +2,7 @@
 const ADDON_DATA = {
   "MANIFEST": {
     "id": "com.kharmamedic.studywithme",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "name": "Kharma Medic — Study With Me",
     "description": "جميع جلسات المذاكرة بالوقت الفعلي (Real Time Study With Me - Pomodoro) لقناة Kharma Medic جاهزة للتشغيل على Nuvio.",
     "logo": "https://yt3.googleusercontent.com/ytc/AIdro_nX_iJMKECaF3eGa4F38RwjfSWH39a1k0S2Tnk4Qhi6iLo=s900-c-k-c0x00ffffff-no-rj",
@@ -1130,36 +1130,12 @@ const ADDON_DATA = {
     "km_1Z33r0rOlNc": {
       "streams": [
         {
-          "name": "Direct 1080p ⚡\nالجزء 1/3",
-          "title": "⚡ 1080p Full HD — الجزء 1 من 3 (الساعات 00:00 إلى 02:57 • 1.24 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_1Z33r0rOlNc_1080p_part1.mp4",
+          "name": "Direct 1080p ⚡\nXbox & iPad",
+          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (8h 53m • 3.62 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
+          "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_1Z33r0rOlNc.m3u8",
           "behaviorHints": {
             "notWebReady": false,
-            "bingeGroup": "kharma-1080p-1Z33r0rOlNc",
-            "filename": "kharma_1Z33r0rOlNc_1080p_part1.mp4",
-            "videoSize": 1330903360
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 2/3",
-          "title": "⚡ 1080p Full HD — الجزء 2 من 3 (الساعات 02:57 إلى 05:55 • 1.24 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_1Z33r0rOlNc_1080p_part2.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-1Z33r0rOlNc",
-            "filename": "kharma_1Z33r0rOlNc_1080p_part2.mp4",
-            "videoSize": 1326117365
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 3/3",
-          "title": "⚡ 1080p Full HD — الجزء 3 من 3 (الساعات 05:55 إلى 08:52 • 1.15 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_1Z33r0rOlNc_1080p_part3.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-1Z33r0rOlNc",
-            "filename": "kharma_1Z33r0rOlNc_1080p_part3.mp4",
-            "videoSize": 1231311507
+            "bingeGroup": "kharma-1080p-1Z33r0rOlNc"
           }
         },
         {
@@ -1177,47 +1153,12 @@ const ADDON_DATA = {
     "km_A_BjvkJOetA": {
       "streams": [
         {
-          "name": "Direct 1080p ⚡\nالجزء 1/4",
-          "title": "⚡ 1080p Full HD — الجزء 1 من 4 (الساعات 00:00 إلى 03:00 • 1.09 GB)\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_A_BjvkJOetA_1080p_part1.mp4",
+          "name": "Direct 1080p ⚡\nXbox & iPad",
+          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (12h 01m • 4.33 GB)\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).",
+          "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_A_BjvkJOetA.m3u8",
           "behaviorHints": {
             "notWebReady": false,
-            "bingeGroup": "kharma-1080p-A_BjvkJOetA",
-            "filename": "kharma_A_BjvkJOetA_1080p_part1.mp4",
-            "videoSize": 1170205805
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 2/4",
-          "title": "⚡ 1080p Full HD — الجزء 2 من 4 (الساعات 03:00 إلى 06:01 • 1.10 GB)\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_A_BjvkJOetA_1080p_part2.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-A_BjvkJOetA",
-            "filename": "kharma_A_BjvkJOetA_1080p_part2.mp4",
-            "videoSize": 1181075247
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 3/4",
-          "title": "⚡ 1080p Full HD — الجزء 3 من 4 (الساعات 06:01 إلى 09:01 • 1.11 GB)\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_A_BjvkJOetA_1080p_part3.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-A_BjvkJOetA",
-            "filename": "kharma_A_BjvkJOetA_1080p_part3.mp4",
-            "videoSize": 1191725560
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 4/4",
-          "title": "⚡ 1080p Full HD — الجزء 4 من 4 (الساعات 09:01 إلى 12:00 • 1.03 GB)\nجلسة مذاكرة حقيقية لمدة 12 ساعة كاملة بدون موسيقى بنظام بومودورو (50 دقيقة مذاكرة / 10 دقائق راحة) مع د. ناصر (Kharma Medic).",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_A_BjvkJOetA_1080p_part4.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-A_BjvkJOetA",
-            "filename": "kharma_A_BjvkJOetA_1080p_part4.mp4",
-            "videoSize": 1110235451
+            "bingeGroup": "kharma-1080p-A_BjvkJOetA"
           }
         },
         {
@@ -1344,25 +1285,12 @@ const ADDON_DATA = {
     "km_V3DNjGB27Go": {
       "streams": [
         {
-          "name": "Direct 1080p ⚡\nالجزء 1/2",
-          "title": "⚡ 1080p Full HD — الجزء 1 من 2 (الساعات 00:00 إلى 03:23 • 1.17 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_V3DNjGB27Go_1080p_part1.mp4",
+          "name": "Direct 1080p ⚡\nXbox & iPad",
+          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (6h 46m • 2.41 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
+          "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_V3DNjGB27Go.m3u8",
           "behaviorHints": {
             "notWebReady": false,
-            "bingeGroup": "kharma-1080p-V3DNjGB27Go",
-            "filename": "kharma_V3DNjGB27Go_1080p_part1.mp4",
-            "videoSize": 1259538597
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 2/2",
-          "title": "⚡ 1080p Full HD — الجزء 2 من 2 (الساعات 03:23 إلى 06:46 • 1.24 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_V3DNjGB27Go_1080p_part2.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-V3DNjGB27Go",
-            "filename": "kharma_V3DNjGB27Go_1080p_part2.mp4",
-            "videoSize": 1326087803
+            "bingeGroup": "kharma-1080p-V3DNjGB27Go"
           }
         },
         {
@@ -1405,36 +1333,12 @@ const ADDON_DATA = {
     "km_cPTRA1gIWak": {
       "streams": [
         {
-          "name": "Direct 1080p ⚡\nالجزء 1/3",
-          "title": "⚡ 1080p Full HD — الجزء 1 من 3 (الساعات 00:00 إلى 02:21 • 1.05 GB)\nجلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_cPTRA1gIWak_1080p_part1.mp4",
+          "name": "Direct 1080p ⚡\nXbox & iPad",
+          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (7h 02m • 2.97 GB)\nجلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.",
+          "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_cPTRA1gIWak.m3u8",
           "behaviorHints": {
             "notWebReady": false,
-            "bingeGroup": "kharma-1080p-cPTRA1gIWak",
-            "filename": "kharma_cPTRA1gIWak_1080p_part1.mp4",
-            "videoSize": 1127020655
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 2/3",
-          "title": "⚡ 1080p Full HD — الجزء 2 من 3 (الساعات 02:21 إلى 04:42 • 0.98 GB)\nجلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_cPTRA1gIWak_1080p_part2.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-cPTRA1gIWak",
-            "filename": "kharma_cPTRA1gIWak_1080p_part2.mp4",
-            "videoSize": 1051554416
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 3/3",
-          "title": "⚡ 1080p Full HD — الجزء 3 من 3 (الساعات 04:42 إلى 07:02 • 0.94 GB)\nجلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_cPTRA1gIWak_1080p_part3.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-cPTRA1gIWak",
-            "filename": "kharma_cPTRA1gIWak_1080p_part3.mp4",
-            "videoSize": 1006665892
+            "bingeGroup": "kharma-1080p-cPTRA1gIWak"
           }
         },
         {
@@ -1452,47 +1356,12 @@ const ADDON_DATA = {
     "km_fJP7c8xt1n4": {
       "streams": [
         {
-          "name": "Direct 1080p ⚡\nالجزء 1/4",
-          "title": "⚡ 1080p Full HD — الجزء 1 من 4 (الساعات 00:00 إلى 02:30 • 1.26 GB)\nجلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_fJP7c8xt1n4_1080p_part1.mp4",
+          "name": "Direct 1080p ⚡\nXbox & iPad",
+          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (10h 01m • 4.68 GB)\nجلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.",
+          "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_fJP7c8xt1n4.m3u8",
           "behaviorHints": {
             "notWebReady": false,
-            "bingeGroup": "kharma-1080p-fJP7c8xt1n4",
-            "filename": "kharma_fJP7c8xt1n4_1080p_part1.mp4",
-            "videoSize": 1354701430
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 2/4",
-          "title": "⚡ 1080p Full HD — الجزء 2 من 4 (الساعات 02:30 إلى 05:01 • 1.21 GB)\nجلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_fJP7c8xt1n4_1080p_part2.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-fJP7c8xt1n4",
-            "filename": "kharma_fJP7c8xt1n4_1080p_part2.mp4",
-            "videoSize": 1302688731
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 3/4",
-          "title": "⚡ 1080p Full HD — الجزء 3 من 4 (الساعات 05:01 إلى 07:31 • 1.30 GB)\nجلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_fJP7c8xt1n4_1080p_part3.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-fJP7c8xt1n4",
-            "filename": "kharma_fJP7c8xt1n4_1080p_part3.mp4",
-            "videoSize": 1400638014
-          }
-        },
-        {
-          "name": "Direct 1080p ⚡\nالجزء 4/4",
-          "title": "⚡ 1080p Full HD — الجزء 4 من 4 (الساعات 07:31 إلى 10:00 • 0.90 GB)\nجلسة مذاكرة مطولة لمدة 10 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10) لرفع التركيز والإنتاجية.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_fJP7c8xt1n4_1080p_part4.mp4",
-          "behaviorHints": {
-            "notWebReady": false,
-            "bingeGroup": "kharma-1080p-fJP7c8xt1n4",
-            "filename": "kharma_fJP7c8xt1n4_1080p_part4.mp4",
-            "videoSize": 967562809
+            "bingeGroup": "kharma-1080p-fJP7c8xt1n4"
           }
         },
         {
