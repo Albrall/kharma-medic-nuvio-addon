@@ -1,6 +1,17 @@
 {
   "streams": [
     {
+      "name": "Direct 1080p ⚡\nXbox & iPad",
+      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (2h 18m • 976 MB)\nجلسة تركيز قصوى لمدة ساعتين بالوقت الفعلي أثناء تقديم اختبار كلية الطب بدون موسيقى.",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_yyqQJD1PMrA_1080p.mp4",
+      "behaviorHints": {
+        "notWebReady": false,
+        "bingeGroup": "kharma-1080p-yyqQJD1PMrA",
+        "filename": "kharma_yyqQJD1PMrA_1080p.mp4",
+        "videoSize": 1023093259
+      }
+    },
+    {
       "name": "Nuvio Player\nYouTube HD",
       "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (2h 18m)\nREAL TIME Study With Me (no music): 2 HOUR Medical School Exam | KharmaMedic",
       "ytId": "yyqQJD1PMrA"

@@ -1,6 +1,17 @@
 {
   "streams": [
     {
+      "name": "Direct 1080p ⚡\nXbox & iPad",
+      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (1h 09m • 406 MB)\nساعة قوة وتركيز متواصل بدون فواصل (Power Hour) وبدون موسيقى لإنجاز المهام السريعة.",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_m5HqaG9TnDk_1080p.mp4",
+      "behaviorHints": {
+        "notWebReady": false,
+        "bingeGroup": "kharma-1080p-m5HqaG9TnDk",
+        "filename": "kharma_m5HqaG9TnDk_1080p.mp4",
+        "videoSize": 425205530
+      }
+    },
+    {
       "name": "Nuvio Player\nYouTube HD",
       "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (1h 09m)\nREAL TIME study with me (no music): 1 HOUR Productive Power Session | KharmaMedic",
       "ytId": "m5HqaG9TnDk"

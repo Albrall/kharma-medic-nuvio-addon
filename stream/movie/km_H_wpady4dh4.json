@@ -1,6 +1,17 @@
 {
   "streams": [
     {
+      "name": "Direct 1080p ⚡\nXbox & iPad",
+      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (6h 10m • 1.68 GB)\nجلسة مذاكرة لمدة 6 ساعات بالوقت الفعلي بدون موسيقى بنظام بومودورو (50/10).",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_H_wpady4dh4_1080p.mp4",
+      "behaviorHints": {
+        "notWebReady": false,
+        "bingeGroup": "kharma-1080p-H_wpady4dh4",
+        "filename": "kharma_H_wpady4dh4_1080p.mp4",
+        "videoSize": 1802292581
+      }
+    },
+    {
       "name": "Nuvio Player\nYouTube HD",
       "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (6h 10m)\nREAL TIME study with me (no music): 6 HOUR Productive Pomodoro Session | KharmaMedic",
       "ytId": "H_wpady4dh4"
