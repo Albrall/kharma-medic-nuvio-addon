@@ -3,10 +3,12 @@
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
       "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (7h 02m • 2.97 GB)\nجلسة المذاكرة الشهيرة لمدة 7 ساعات متواصلة بنظام Pomodoro بدون موسيقى مع Kharma Medic.",
-      "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_cPTRA1gIWak.m3u8",
+      "url": "https://kharma-medic-1080p.albrall-kharma.workers.dev/mp4/kharma_cPTRA1gIWak_1080p.mp4",
       "behaviorHints": {
         "notWebReady": false,
-        "bingeGroup": "kharma-1080p-cPTRA1gIWak"
+        "bingeGroup": "kharma-1080p-cPTRA1gIWak",
+        "filename": "kharma_cPTRA1gIWak_1080p.mp4",
+        "videoSize": 3191226509
       }
     },
     {

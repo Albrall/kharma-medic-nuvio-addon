@@ -2,11 +2,13 @@
   "streams": [
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (8h 53m • 3.62 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
-      "url": "https://albrall.github.io/kharma-medic-nuvio-addon/hls/km_1Z33r0rOlNc.m3u8",
+      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (8h 53m • 3.63 GB)\nجلسة مذاكرة حقيقية لمدة 8 ساعات (مع جولة بومودورو إضافية في النهاية) بدون موسيقى وبأصوات المذاكرة الطبيعية فقط.",
+      "url": "https://kharma-medic-1080p.albrall-kharma.workers.dev/mp4/kharma_1Z33r0rOlNc_1080p.mp4",
       "behaviorHints": {
         "notWebReady": false,
-        "bingeGroup": "kharma-1080p-1Z33r0rOlNc"
+        "bingeGroup": "kharma-1080p-1Z33r0rOlNc",
+        "filename": "kharma_1Z33r0rOlNc_1080p.mp4",
+        "videoSize": 3895841359
       }
     },
     {
