@@ -1,4 +1,5 @@
 const http = require("http");
+const { Readable } = require("stream");
 const ADDON_DATA = require("./lib/addon_data");
 const { handleAddonRequest } = require("./lib/torbox_resolver");
 
@@ -22,6 +23,7 @@ const server = http.createServer(async (req, res) => {
       req.socket?.remoteAddress ||
       "";
     const pathname = (req.url || "/").split("?")[0];
+    const rangeHeader = req.headers["range"] || "";
 
     const result = await handleAddonRequest(
       {
@@ -29,27 +31,46 @@ const server = http.createServer(async (req, res) => {
         pathname,
         origin,
         clientIp,
+        rangeHeader,
         env: process.env,
       },
       ADDON_DATA
     );
 
     res.writeHead(result.status, result.headers);
-    if (req.method === "HEAD") {
+    if (req.method === "HEAD" || result.body === null || result.body === undefined) {
       return res.end();
+    }
+    if (result.isStream && typeof result.body.getReader === "function") {
+      const nodeStream = Readable.fromWeb(result.body);
+      req.on("close", () => {
+        try {
+          nodeStream.destroy();
+        } catch (_) {}
+      });
+      nodeStream.on("error", () => {
+        try {
+          res.destroy();
+        } catch (_) {}
+      });
+      return nodeStream.pipe(res);
     }
     res.end(result.body);
   } catch (err) {
-    res.writeHead(500, {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json; charset=utf-8",
-    });
-    res.end(JSON.stringify({ error: String(err.message || err) }));
+    if (!res.headersSent) {
+      res.writeHead(500, {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json; charset=utf-8",
+      });
+      res.end(JSON.stringify({ error: String(err.message || err) }));
+    } else {
+      res.destroy();
+    }
   }
 });
 
 server.listen(PORT, "0.0.0.0", () => {
   console.log(
-    `Kharma Medic × TorBox Nuvio Addon listening on http://0.0.0.0:${PORT}/manifest.json`
+    `Kharma Medic 1080p Nuvio Addon listening on http://0.0.0.0:${PORT}/manifest.json`
   );
 });

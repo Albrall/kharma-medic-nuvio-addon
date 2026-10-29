@@ -1,8 +1,8 @@
-// Auto-generated single-file Cloudflare Worker for Kharma Medic × TorBox Nuvio Addon
+// Auto-generated single-file Cloudflare Worker for Kharma Medic 1080p Nuvio Addon
 const ADDON_DATA = {
   "MANIFEST": {
     "id": "com.kharmamedic.studywithme",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "name": "Kharma Medic — Study With Me",
     "description": "جميع جلسات المذاكرة بالوقت الفعلي (Real Time Study With Me - Pomodoro) لقناة Kharma Medic جاهزة للتشغيل على Nuvio.",
     "logo": "https://yt3.googleusercontent.com/ytc/AIdro_nX_iJMKECaF3eGa4F38RwjfSWH39a1k0S2Tnk4Qhi6iLo=s900-c-k-c0x00ffffff-no-rj",
@@ -1186,13 +1186,13 @@ const ADDON_DATA = {
       "streams": [
         {
           "name": "Direct 1080p ⚡\nXbox & iPad",
-          "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (4h 44m • 1.61 GB)\nأحدث جلسات Study With Me من Kharma Medic (أغسطس 2024) — 4 ساعات بومودورو (50/10) بدون موسيقى.",
-          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_Dx0Cko4e5Bk_1080p.mp4",
+          "title": "⚡ بث مباشر فوري 1080p Full HD (نسخة صوت معالَجة ونقية v2 • 4h 44m • 1.60 GB)\nأحدث جلسات Study With Me من Kharma Medic (أغسطس 2024) — 4 ساعات بومودورو (50/10) بدون موسيقى.",
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_Dx0Cko4e5Bk_1080p_v2.mp4",
           "behaviorHints": {
             "notWebReady": false,
             "bingeGroup": "kharma-1080p-Dx0Cko4e5Bk",
-            "filename": "kharma_Dx0Cko4e5Bk_1080p.mp4",
-            "videoSize": 1730825634
+            "filename": "kharma_Dx0Cko4e5Bk_1080p_v2.mp4",
+            "videoSize": 1721478170
           }
         },
         {
@@ -1724,7 +1724,165 @@ const ADDON_DATA = {
       "md5Short": "e35baa9727bc1f71c9ab0304ae9b97b1"
     }
   },
-  "TORBOX_MAP": {}
+  "TORBOX_MAP": {},
+  "MARATHON_MP4_MAP": {
+    "V3DNjGB27Go": {
+      "ytId": "V3DNjGB27Go",
+      "filename": "kharma_V3DNjGB27Go_1080p.mp4",
+      "total_size": 2591337546,
+      "duration": 24375.008,
+      "width": 1920,
+      "height": 1080,
+      "slice_size": 1992294400,
+      "slices": [
+        {
+          "index": 0,
+          "name": "kharma_V3DNjGB27Go_1080p.mp4.s0",
+          "start": 0,
+          "end": 1992294399,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_V3DNjGB27Go_1080p.mp4.s0"
+        },
+        {
+          "index": 1,
+          "name": "kharma_V3DNjGB27Go_1080p.mp4.s1",
+          "start": 1992294400,
+          "end": 2591337545,
+          "size": 599043146,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_V3DNjGB27Go_1080p.mp4.s1"
+        }
+      ],
+      "verified": true
+    },
+    "cPTRA1gIWak": {
+      "ytId": "cPTRA1gIWak",
+      "filename": "kharma_cPTRA1gIWak_1080p.mp4",
+      "total_size": 3191226509,
+      "duration": 25345.068,
+      "width": 1920,
+      "height": 1080,
+      "slice_size": 1992294400,
+      "slices": [
+        {
+          "index": 0,
+          "name": "kharma_cPTRA1gIWak_1080p.mp4.s0",
+          "start": 0,
+          "end": 1992294399,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_cPTRA1gIWak_1080p.mp4.s0"
+        },
+        {
+          "index": 1,
+          "name": "kharma_cPTRA1gIWak_1080p.mp4.s1",
+          "start": 1992294400,
+          "end": 3191226508,
+          "size": 1198932109,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_cPTRA1gIWak_1080p.mp4.s1"
+        }
+      ],
+      "verified": true
+    },
+    "1Z33r0rOlNc": {
+      "ytId": "1Z33r0rOlNc",
+      "filename": "kharma_1Z33r0rOlNc_1080p.mp4",
+      "total_size": 3895841359,
+      "duration": 31956.323,
+      "width": 1920,
+      "height": 1080,
+      "slice_size": 1992294400,
+      "slices": [
+        {
+          "index": 0,
+          "name": "kharma_1Z33r0rOlNc_1080p.mp4.s0",
+          "start": 0,
+          "end": 1992294399,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_1Z33r0rOlNc_1080p.mp4.s0"
+        },
+        {
+          "index": 1,
+          "name": "kharma_1Z33r0rOlNc_1080p.mp4.s1",
+          "start": 1992294400,
+          "end": 3895841358,
+          "size": 1903546959,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_1Z33r0rOlNc_1080p.mp4.s1"
+        }
+      ],
+      "verified": true
+    },
+    "fJP7c8xt1n4": {
+      "ytId": "fJP7c8xt1n4",
+      "filename": "kharma_fJP7c8xt1n4_1080p.mp4",
+      "total_size": 5043189084,
+      "duration": 36037.904,
+      "width": 1918,
+      "height": 1080,
+      "slice_size": 1992294400,
+      "slices": [
+        {
+          "index": 0,
+          "name": "kharma_fJP7c8xt1n4_1080p.mp4.s0",
+          "start": 0,
+          "end": 1992294399,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_fJP7c8xt1n4_1080p.mp4.s0"
+        },
+        {
+          "index": 1,
+          "name": "kharma_fJP7c8xt1n4_1080p.mp4.s1",
+          "start": 1992294400,
+          "end": 3984588799,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_fJP7c8xt1n4_1080p.mp4.s1"
+        },
+        {
+          "index": 2,
+          "name": "kharma_fJP7c8xt1n4_1080p.mp4.s2",
+          "start": 3984588800,
+          "end": 5043189083,
+          "size": 1058600284,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_fJP7c8xt1n4_1080p.mp4.s2"
+        }
+      ],
+      "verified": true
+    },
+    "A_BjvkJOetA": {
+      "ytId": "A_BjvkJOetA",
+      "filename": "kharma_A_BjvkJOetA_1080p.mp4",
+      "total_size": 4673763940,
+      "duration": 43243.265,
+      "width": 1920,
+      "height": 1080,
+      "slice_size": 1992294400,
+      "slices": [
+        {
+          "index": 0,
+          "name": "kharma_A_BjvkJOetA_1080p.mp4.s0",
+          "start": 0,
+          "end": 1992294399,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_A_BjvkJOetA_1080p.mp4.s0"
+        },
+        {
+          "index": 1,
+          "name": "kharma_A_BjvkJOetA_1080p.mp4.s1",
+          "start": 1992294400,
+          "end": 3984588799,
+          "size": 1992294400,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_A_BjvkJOetA_1080p.mp4.s1"
+        },
+        {
+          "index": 2,
+          "name": "kharma_A_BjvkJOetA_1080p.mp4.s2",
+          "start": 3984588800,
+          "end": 4673763939,
+          "size": 689175140,
+          "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.2-mp4-1080p/kharma_A_BjvkJOetA_1080p.mp4.s2"
+        }
+      ],
+      "verified": true
+    }
+  }
 };
 
 /**
@@ -1745,8 +1903,273 @@ const CORS_HEADERS = {
 const MYLIST_CACHE = new Map();     // key -> { items, fetchedAt, ttlMs }
 const CDN_LINK_CACHE = new Map();   // `${key}:${webId}:${fileId}` -> { url, expiresAt }
 const AUTO_QUEUE_SEEN = new Set();  // `${key}:${ytId}` -> prevents duplicate background adds
+const SLICE_SIGNED_URL_CACHE = new Map(); // sliceUrl -> { signedUrl, expiresAt }
 
 const CDN_TTL_MS = 45 * 60 * 1000; // 45 minutes (TorBox links stay valid 1–3 hours)
+const SLICE_SIGNED_TTL_MS = 180 * 1000; // 3 minutes (GitHub signed asset URLs last ~5m)
+
+async function resolveSignedSliceUrl(sliceUrl) {
+  const now = Date.now();
+  const hit = SLICE_SIGNED_URL_CACHE.get(sliceUrl);
+  if (hit && hit.expiresAt > now) {
+    return hit.signedUrl;
+  }
+  try {
+    const resp = await fetch(sliceUrl, {
+      method: "GET",
+      redirect: "manual",
+      headers: { "User-Agent": "kharma-medic-edge-mp4/2.2" },
+    });
+    const loc = resp.headers.get("location");
+    try {
+      await resp.body?.cancel();
+    } catch (_) {}
+    if (loc && loc.startsWith("http")) {
+      SLICE_SIGNED_URL_CACHE.set(sliceUrl, {
+        signedUrl: loc,
+        expiresAt: now + SLICE_SIGNED_TTL_MS,
+      });
+      return loc;
+    }
+  } catch (_) {}
+  return sliceUrl;
+}
+
+async function openSliceRangeResponse(sliceUrl, localStart, localEnd, signal) {
+  const rangeHdr = `bytes=${localStart}-${localEnd}`;
+  const targetUrl = await resolveSignedSliceUrl(sliceUrl);
+  let resp = await fetch(targetUrl, {
+    method: "GET",
+    redirect: "follow",
+    signal,
+    headers: {
+      Range: rangeHdr,
+      "User-Agent": "kharma-medic-edge-mp4/2.2",
+    },
+  });
+  if ((resp.status === 401 || resp.status === 403 || resp.status === 404) && targetUrl !== sliceUrl) {
+    try {
+      await resp.body?.cancel();
+    } catch (_) {}
+    SLICE_SIGNED_URL_CACHE.delete(sliceUrl);
+    resp = await fetch(sliceUrl, {
+      method: "GET",
+      redirect: "follow",
+      signal,
+      headers: {
+        Range: rangeHdr,
+        "User-Agent": "kharma-medic-edge-mp4/2.2",
+      },
+    });
+  }
+  if (resp.status !== 206 && !(localStart === 0 && resp.status === 200)) {
+    const st = resp.status;
+    try {
+      await resp.body?.cancel();
+    } catch (_) {}
+    throw new Error(`Upstream slice HTTP ${st} for ${rangeHdr}`);
+  }
+  return resp;
+}
+
+function parseHttpRange(rangeHeader, totalSize) {
+  if (!rangeHeader || !/^bytes=/i.test(rangeHeader.trim())) {
+    return { partial: false, start: 0, end: totalSize - 1 };
+  }
+  const spec = rangeHeader.trim().replace(/^bytes=/i, "").split(",")[0].trim();
+  const dash = spec.indexOf("-");
+  if (dash === -1) return null;
+
+  const startStr = spec.slice(0, dash).trim();
+  const endStr = spec.slice(dash + 1).trim();
+
+  let start, end;
+  if (startStr === "") {
+    // Suffix byte-range-spec: bytes=-N
+    const suffix = Number(endStr);
+    if (!Number.isFinite(suffix) || suffix <= 0) return null;
+    start = Math.max(0, totalSize - Math.floor(suffix));
+    end = totalSize - 1;
+  } else {
+    start = Number(startStr);
+    if (!Number.isFinite(start) || start < 0 || !Number.isInteger(start)) return null;
+    if (endStr === "") {
+      end = totalSize - 1;
+    } else {
+      end = Number(endStr);
+      if (!Number.isFinite(end) || !Number.isInteger(end)) return null;
+    }
+  }
+
+  if (start >= totalSize || start > end) return null;
+  end = Math.min(end, totalSize - 1);
+  return { partial: true, start, end };
+}
+
+function handleVirtualMp4Request(method, vid, rangeHeader, marathonMap) {
+  const entry = marathonMap?.[vid];
+  if (!entry || !Array.isArray(entry.slices) || !entry.total_size) {
+    return {
+      status: 404,
+      headers: { ...CORS_HEADERS, "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify({ error: "Marathon MP4 not found", vid }),
+      isStream: false,
+    };
+  }
+
+  const totalSize = Number(entry.total_size);
+  const parsed = parseHttpRange(rangeHeader, totalSize);
+  const baseHeaders = {
+    ...CORS_HEADERS,
+    "Access-Control-Expose-Headers": "Content-Length, Content-Range, Accept-Ranges",
+    "Accept-Ranges": "bytes",
+    "Content-Type": "video/mp4",
+    "Content-Disposition": `inline; filename="kharma_${vid}_1080p.mp4"`,
+    "Cache-Control": "no-transform",
+  };
+
+  if (!parsed) {
+    return {
+      status: 416,
+      headers: {
+        ...baseHeaders,
+        "Content-Range": `bytes */${totalSize}`,
+        "Content-Length": "0",
+      },
+      body: "",
+      isStream: false,
+    };
+  }
+
+  const { partial, start, end } = parsed;
+  const contentLength = end - start + 1;
+  const status = partial ? 206 : 200;
+  const headers = {
+    ...baseHeaders,
+    "Content-Length": String(contentLength),
+    ...(partial ? { "Content-Range": `bytes ${start}-${end}/${totalSize}` } : {}),
+  };
+
+  if (method === "HEAD") {
+    return { status, headers, body: null, isStream: true };
+  }
+
+  // Build exact cross-slice execution plan
+  const plan = [];
+  for (const s of entry.slices) {
+    if (s.end < start || s.start > end) continue;
+    const localStart = Math.max(0, start - s.start);
+    const localEnd = Math.min(s.size - 1, end - s.start);
+    plan.push({
+      url: s.url,
+      localStart,
+      localEnd,
+      expected: localEnd - localStart + 1,
+    });
+  }
+
+  let qIdx = 0;
+  let bytesReadInSlice = 0;
+  let retriesInSlice = 0;
+  let activeReader = null;
+  let activeAbort = null;
+  let cancelled = false;
+
+  const stream = new ReadableStream({
+    async pull(controller) {
+      while (!cancelled) {
+        if (!activeReader) {
+          if (qIdx >= plan.length) {
+            controller.close();
+            return;
+          }
+          const seg = plan[qIdx];
+          const curStart = seg.localStart + bytesReadInSlice;
+          activeAbort = new AbortController();
+          const resp = await openSliceRangeResponse(
+            seg.url,
+            curStart,
+            seg.localEnd,
+            activeAbort.signal
+          );
+          activeReader = resp.body.getReader();
+        }
+
+        let readRes;
+        try {
+          readRes = await activeReader.read();
+        } catch (err) {
+          try {
+            activeReader?.releaseLock();
+          } catch (_) {}
+          activeReader = null;
+          if (cancelled) return;
+          if (retriesInSlice < 4) {
+            retriesInSlice += 1;
+            continue;
+          }
+          throw err;
+        }
+
+        const { done, value } = readRes;
+        if (done) {
+          try {
+            activeReader.releaseLock();
+          } catch (_) {}
+          activeReader = null;
+          activeAbort = null;
+          const seg = plan[qIdx];
+          if (bytesReadInSlice < seg.expected) {
+            if (retriesInSlice < 4) {
+              retriesInSlice += 1;
+              continue;
+            }
+            throw new Error(
+              `Incomplete slice read (${bytesReadInSlice}/${seg.expected})`
+            );
+          }
+          qIdx += 1;
+          bytesReadInSlice = 0;
+          retriesInSlice = 0;
+          continue;
+        }
+
+        if (value && value.byteLength > 0) {
+          retriesInSlice = 0;
+          const seg = plan[qIdx];
+          const remaining = seg.expected - bytesReadInSlice;
+          const chunk =
+            value.byteLength > remaining ? value.subarray(0, remaining) : value;
+          bytesReadInSlice += chunk.byteLength;
+          controller.enqueue(chunk);
+          if (bytesReadInSlice >= seg.expected) {
+            try {
+              await activeReader.cancel();
+            } catch (_) {}
+            activeReader = null;
+            activeAbort = null;
+            qIdx += 1;
+            bytesReadInSlice = 0;
+          }
+          return;
+        }
+      }
+    },
+    cancel() {
+      cancelled = true;
+      try {
+        activeReader?.cancel();
+      } catch (_) {}
+      try {
+        activeAbort?.abort();
+      } catch (_) {}
+      activeReader = null;
+      activeAbort = null;
+    },
+  });
+
+  return { status, headers, body: stream, isStream: true };
+}
 
 function cleanIpv4(rawHeader) {
   if (!rawHeader) return null;
@@ -1805,7 +2228,7 @@ function parseRouteAndToken(pathname, envToken) {
   );
   if (
     directToken &&
-    !["api", "catalog", "meta", "stream", "lib", "tb"].includes(directToken[1])
+    !["api", "catalog", "meta", "stream", "lib", "tb", "mp4"].includes(directToken[1])
   ) {
     return {
       token: directToken[1].trim(),
@@ -2052,13 +2475,31 @@ function formatBytes(bytes) {
   return `${mb.toFixed(0)} MB`;
 }
 
-async function resolveStreamsForItem(data, itemId, apiKey, env, clientIpv4) {
+async function resolveStreamsForItem(data, itemId, apiKey, env, clientIpv4, origin) {
   const baseObj = data.BASE_STREAMS[itemId];
   if (!baseObj) return { streams: [] };
 
-  const fallbackStreams = Array.isArray(baseObj.streams) ? [...baseObj.streams] : [];
   const ytId = itemId.replace(/^km_/, "");
   const session = data.SESSIONS[ytId];
+  const mEntry = data.MARATHON_MP4_MAP?.[ytId];
+  let fallbackStreams = Array.isArray(baseObj.streams)
+    ? baseObj.streams.map((s) => ({ ...s, behaviorHints: s.behaviorHints ? { ...s.behaviorHints } : undefined }))
+    : [];
+
+  if (mEntry && origin && fallbackStreams.length > 0) {
+    const mp4Origin = (env?.MP4_EDGE_ORIGIN || origin).replace(/\/+$/, "");
+    fallbackStreams[0] = {
+      ...fallbackStreams[0],
+      url: `${mp4Origin}/mp4/kharma_${ytId}_1080p.mp4`,
+      behaviorHints: {
+        notWebReady: false,
+        bingeGroup: `kharma-1080p-${ytId}`,
+        filename: mEntry.filename || `kharma_${ytId}_1080p.mp4`,
+        videoSize: mEntry.total_size,
+      },
+    };
+  }
+
   if (!apiKey || !session) {
     return { streams: fallbackStreams };
   }
@@ -2317,9 +2758,21 @@ function renderConfigureHtml(data, origin, prefix, hasEnvKey) {
 </html>`;
 }
 
-async function handleAddonRequest({ method, pathname, origin, clientIp, env }, data) {
+async function handleAddonRequest({ method, pathname, origin, clientIp, rangeHeader, env }, data) {
   if (method === "OPTIONS") {
     return { status: 204, headers: CORS_HEADERS, body: "" };
+  }
+
+  // 0. Lossless Single-File Marathon Virtual MP4 Byte-Range Stitcher (/mp4/kharma_<vid>_1080p.mp4)
+  const cleanRaw = decodeURIComponent((pathname || "/").split("?")[0]);
+  const mp4Match = cleanRaw.match(/^\/mp4\/(?:kharma_)?([A-Za-z0-9_-]{11})(?:_1080p)?\.mp4$/);
+  if (mp4Match) {
+    return handleVirtualMp4Request(
+      method,
+      mp4Match[1],
+      rangeHeader || "",
+      data.MARATHON_MP4_MAP
+    );
   }
 
   const envToken = env?.TORBOX_API_KEY || "";
@@ -2426,7 +2879,8 @@ async function handleAddonRequest({ method, pathname, origin, clientIp, env }, d
       itemId,
       token,
       env,
-      clientIpv4
+      clientIpv4,
+      origin
     );
     return {
       status: 200,
@@ -2456,17 +2910,19 @@ export default {
       request.headers.get("cf-connecting-ip") ||
       request.headers.get("x-forwarded-for") ||
       "";
+    const rangeHeader = request.headers.get("range") || "";
     const result = await handleAddonRequest(
       {
         method: request.method,
         pathname: url.pathname,
         origin: url.origin,
         clientIp,
+        rangeHeader,
         env: env || {},
       },
       ADDON_DATA
     );
-    return new Response(result.method === "HEAD" ? null : result.body, {
+    return new Response(request.method === "HEAD" ? null : result.body, {
       status: result.status,
       headers: result.headers,
     });

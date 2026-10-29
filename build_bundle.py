@@ -40,6 +40,13 @@ def main():
         else {}
     )
 
+    m_map_path = os.path.join(ROOT, "marathon_mp4_map.json")
+    marathon_mp4_map = (
+        json.load(open(m_map_path, encoding="utf-8"))
+        if os.path.exists(m_map_path)
+        else {}
+    )
+
     sessions = {}
     for m in catalogs["kharma_all"]["metas"]:
         item_id = m["id"]
@@ -72,6 +79,7 @@ def main():
         "BASE_STREAMS": base_streams,
         "SESSIONS": sessions,
         "TORBOX_MAP": torbox_map,
+        "MARATHON_MP4_MAP": marathon_mp4_map,
     }
     data_json = json.dumps(bundle_obj, ensure_ascii=False, indent=2)
 
@@ -90,7 +98,7 @@ def main():
         r"module\.exports\s*=\s*\{[\s\S]*?\};\s*$", "", resolver_src
     )
 
-    worker_code = f"""// Auto-generated single-file Cloudflare Worker for Kharma Medic × TorBox Nuvio Addon
+    worker_code = f"""// Auto-generated single-file Cloudflare Worker for Kharma Medic 1080p Nuvio Addon
 const ADDON_DATA = {data_json};
 
 {resolver_body}
@@ -102,17 +110,19 @@ export default {{
       request.headers.get("cf-connecting-ip") ||
       request.headers.get("x-forwarded-for") ||
       "";
+    const rangeHeader = request.headers.get("range") || "";
     const result = await handleAddonRequest(
       {{
         method: request.method,
         pathname: url.pathname,
         origin: url.origin,
         clientIp,
+        rangeHeader,
         env: env || {{}},
       }},
       ADDON_DATA
     );
-    return new Response(result.method === "HEAD" ? null : result.body, {{
+    return new Response(request.method === "HEAD" ? null : result.body, {{
       status: result.status,
       headers: result.headers,
     }});
