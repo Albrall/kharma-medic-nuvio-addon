@@ -1,8 +1,44 @@
 {
   "streams": [
     {
-      "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (1h 09m • 406 MB)\nساعة قوة وتركيز متواصل بدون فواصل (Power Hour) وبدون موسيقى لإنجاز المهام السريعة.",
+      "name": "اختبار 1 ⚡\n1080p MKV AC3",
+      "title": "1️⃣ اختبار صوت رقم 1 — حاوية MKV + صوت Dolby AC-3 48kHz (مرفوع وصافي)",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/test1_mkv_ac3_48k.mkv",
+      "behaviorHints": {
+        "notWebReady": false,
+        "filename": "test1_mkv_ac3_48k.mkv"
+      }
+    },
+    {
+      "name": "اختبار 2 ⚡\n1080p MP4 DD+",
+      "title": "2️⃣ اختبار صوت رقم 2 — حاوية MP4 + صوت Dolby E-AC-3 48kHz (بدون EditList)",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/test2_mp4_eac3_48k.mp4",
+      "behaviorHints": {
+        "notWebReady": false,
+        "filename": "test2_mp4_eac3_48k.mp4"
+      }
+    },
+    {
+      "name": "اختبار 3 ⚡\n1080p MKV AAC",
+      "title": "3️⃣ اختبار صوت رقم 3 — حاوية MKV + صوت AAC 48kHz (مرفوع وصافي)",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/test3_mkv_aac_48k.mkv",
+      "behaviorHints": {
+        "notWebReady": false,
+        "filename": "test3_mkv_aac_48k.mkv"
+      }
+    },
+    {
+      "name": "اختبار 4 ⚡\n1080p MP4 MP3",
+      "title": "4️⃣ اختبار صوت رقم 4 — حاوية MP4 + صوت MP3 48kHz (مشغل صوت مستقل mpg123)",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/test4_mp4_mp3_48k.mp4",
+      "behaviorHints": {
+        "notWebReady": false,
+        "filename": "test4_mp4_mp3_48k.mp4"
+      }
+    },
+    {
+      "name": "المقطع الأصلي\n1080p MP4",
+      "title": "المقطع الكامل الحالي للمقارنة (1h 09m • 406 MB)",
       "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_m5HqaG9TnDk_1080p.mp4",
       "behaviorHints": {
         "notWebReady": false,
@@ -10,16 +46,6 @@
         "filename": "kharma_m5HqaG9TnDk_1080p.mp4",
         "videoSize": 425205530
       }
-    },
-    {
-      "name": "Nuvio Player\nYouTube HD",
-      "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (1h 09m)\nREAL TIME study with me (no music): 1 HOUR Productive Power Session | KharmaMedic",
-      "ytId": "m5HqaG9TnDk"
-    },
-    {
-      "name": "YouTube App",
-      "title": "📱 فتح في تطبيق يوتيوب الخارجي (1h 09m)\nhttps://www.youtube.com/watch?v=m5HqaG9TnDk",
-      "externalUrl": "https://www.youtube.com/watch?v=m5HqaG9TnDk"
     }
   ]
 }
