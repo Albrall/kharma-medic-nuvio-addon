@@ -104,13 +104,14 @@ const ADDON_DATA = {data_json};
 {resolver_body}
 
 export default {{
-  async fetch(request, env) {{
+  async fetch(request, env, ctx) {{
     const url = new URL(request.url);
     const clientIp =
       request.headers.get("cf-connecting-ip") ||
       request.headers.get("x-forwarded-for") ||
       "";
     const rangeHeader = request.headers.get("range") || "";
+    const waitUntil = ctx && typeof ctx.waitUntil === "function" ? ctx.waitUntil.bind(ctx) : null;
     const result = await handleAddonRequest(
       {{
         method: request.method,
@@ -118,6 +119,7 @@ export default {{
         origin: url.origin,
         clientIp,
         rangeHeader,
+        waitUntil,
         env: env || {{}},
       }},
       ADDON_DATA

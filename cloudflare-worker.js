@@ -2016,7 +2016,7 @@ function parseHttpRange(rangeHeader, totalSize) {
   return { partial: true, start, end };
 }
 
-function handleVirtualMp4Request(method, vid, rangeHeader, marathonMap) {
+function handleVirtualMp4Request(method, vid, rangeHeader, marathonMap, waitUntil) {
   const entry = marathonMap?.[vid];
   if (!entry || !Array.isArray(entry.slices) || !entry.total_size) {
     return {
@@ -2078,107 +2078,48 @@ function handleVirtualMp4Request(method, vid, rangeHeader, marathonMap) {
     });
   }
 
-  let qIdx = 0;
-  let bytesReadInSlice = 0;
-  let retriesInSlice = 0;
-  let activeReader = null;
-  let activeAbort = null;
-  let cancelled = false;
+  // Fast path: single-slice range -> return native C++ upstream body directly (0.0ms JS CPU!)
+  if (plan.length === 1) {
+    return openSliceRangeResponse(plan[0].url, plan[0].localStart, plan[0].localEnd).then(
+      (upstreamResp) => ({
+        status,
+        headers,
+        body: upstreamResp.body,
+        isStream: true,
+      })
+    );
+  }
 
-  const stream = new ReadableStream({
-    async pull(controller) {
-      while (!cancelled) {
-        if (!activeReader) {
-          if (qIdx >= plan.length) {
-            controller.close();
-            return;
-          }
-          const seg = plan[qIdx];
-          const curStart = seg.localStart + bytesReadInSlice;
-          activeAbort = new AbortController();
-          const resp = await openSliceRangeResponse(
-            seg.url,
-            curStart,
-            seg.localEnd,
-            activeAbort.signal
-          );
-          activeReader = resp.body.getReader();
-        }
+  // Multi-slice range -> zero-copy C++ IdentityTransformStream + pipeTo (0.0ms per-chunk JS CPU on Cloudflare Free Tier!)
+  const { readable, writable } =
+    typeof IdentityTransformStream !== "undefined"
+      ? new IdentityTransformStream()
+      : new TransformStream();
 
-        let readRes;
-        try {
-          readRes = await activeReader.read();
-        } catch (err) {
-          try {
-            activeReader?.releaseLock();
-          } catch (_) {}
-          activeReader = null;
-          if (cancelled) return;
-          if (retriesInSlice < 4) {
-            retriesInSlice += 1;
-            continue;
-          }
-          throw err;
-        }
-
-        const { done, value } = readRes;
-        if (done) {
-          try {
-            activeReader.releaseLock();
-          } catch (_) {}
-          activeReader = null;
-          activeAbort = null;
-          const seg = plan[qIdx];
-          if (bytesReadInSlice < seg.expected) {
-            if (retriesInSlice < 4) {
-              retriesInSlice += 1;
-              continue;
-            }
-            throw new Error(
-              `Incomplete slice read (${bytesReadInSlice}/${seg.expected})`
-            );
-          }
-          qIdx += 1;
-          bytesReadInSlice = 0;
-          retriesInSlice = 0;
-          continue;
-        }
-
-        if (value && value.byteLength > 0) {
-          retriesInSlice = 0;
-          const seg = plan[qIdx];
-          const remaining = seg.expected - bytesReadInSlice;
-          const chunk =
-            value.byteLength > remaining ? value.subarray(0, remaining) : value;
-          bytesReadInSlice += chunk.byteLength;
-          controller.enqueue(chunk);
-          if (bytesReadInSlice >= seg.expected) {
-            try {
-              await activeReader.cancel();
-            } catch (_) {}
-            activeReader = null;
-            activeAbort = null;
-            qIdx += 1;
-            bytesReadInSlice = 0;
-          }
-          return;
-        }
+  const pumpPromise = (async () => {
+    try {
+      for (let i = 0; i < plan.length; i++) {
+        const seg = plan[i];
+        const isLast = i === plan.length - 1;
+        const upstreamResp = await openSliceRangeResponse(
+          seg.url,
+          seg.localStart,
+          seg.localEnd
+        );
+        await upstreamResp.body.pipeTo(writable, { preventClose: !isLast });
       }
-    },
-    cancel() {
-      cancelled = true;
+    } catch (_) {
       try {
-        activeReader?.cancel();
+        await writable.abort();
       } catch (_) {}
-      try {
-        activeAbort?.abort();
-      } catch (_) {}
-      activeReader = null;
-      activeAbort = null;
-    },
-  });
+    }
+  })();
 
-  return { status, headers, body: stream, isStream: true };
+  if (typeof waitUntil === "function") {
+    waitUntil(pumpPromise);
+  }
+
+  return { status, headers, body: readable, isStream: true };
 }
 
 function cleanIpv4(rawHeader) {
@@ -2768,7 +2709,7 @@ function renderConfigureHtml(data, origin, prefix, hasEnvKey) {
 </html>`;
 }
 
-async function handleAddonRequest({ method, pathname, origin, clientIp, rangeHeader, env }, data) {
+async function handleAddonRequest({ method, pathname, origin, clientIp, rangeHeader, waitUntil, env }, data) {
   if (method === "OPTIONS") {
     return { status: 204, headers: CORS_HEADERS, body: "" };
   }
@@ -2777,11 +2718,12 @@ async function handleAddonRequest({ method, pathname, origin, clientIp, rangeHea
   const cleanRaw = decodeURIComponent((pathname || "/").split("?")[0]);
   const mp4Match = cleanRaw.match(/^\/mp4\/(?:kharma_)?([A-Za-z0-9_-]{11})(?:_1080p)?\.mp4$/);
   if (mp4Match) {
-    return handleVirtualMp4Request(
+    return await handleVirtualMp4Request(
       method,
       mp4Match[1],
       rangeHeader || "",
-      data.MARATHON_MP4_MAP
+      data.MARATHON_MP4_MAP,
+      waitUntil
     );
   }
 
@@ -2914,13 +2856,14 @@ async function handleAddonRequest({ method, pathname, origin, clientIp, rangeHea
 
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const clientIp =
       request.headers.get("cf-connecting-ip") ||
       request.headers.get("x-forwarded-for") ||
       "";
     const rangeHeader = request.headers.get("range") || "";
+    const waitUntil = ctx && typeof ctx.waitUntil === "function" ? ctx.waitUntil.bind(ctx) : null;
     const result = await handleAddonRequest(
       {
         method: request.method,
@@ -2928,6 +2871,7 @@ export default {
         origin: url.origin,
         clientIp,
         rangeHeader,
+        waitUntil,
         env: env || {},
       },
       ADDON_DATA
