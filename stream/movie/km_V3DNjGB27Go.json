@@ -2,13 +2,13 @@
   "streams": [
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع — مقطع واحد كامل متصل (6h 46m • 2.41 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50 دقيقة تركيز و10 دقائق استراحة بدون موسيقى.",
-      "url": "https://kharma-medic-1080p.albrall-kharma.workers.dev/mp4/kharma_V3DNjGB27Go_1080p.mp4",
+      "title": "⚡ بث مباشر فوري 1080p Full HD • صوت 48kHz صافي بدون تقطيع — مقطع واحد كامل متصل (6h 46m • 2.49 GB)\nجلسة مذاكرة بالوقت الفعلي قرابة 7 ساعات (6 ساعات و46 دقيقة) بنظام 50/10 بدون موسيقى.",
+      "url": "https://kharma-medic-1080p.albrall-kharma.workers.dev/mp4/kharma_V3DNjGB27Go_1080p_48k.mp4",
       "behaviorHints": {
         "notWebReady": false,
         "bingeGroup": "kharma-1080p-V3DNjGB27Go",
-        "filename": "kharma_V3DNjGB27Go_1080p.mp4",
-        "videoSize": 2591337546
+        "filename": "kharma_V3DNjGB27Go_1080p_48k.mp4",
+        "videoSize": 2676593321
       }
     },
     {

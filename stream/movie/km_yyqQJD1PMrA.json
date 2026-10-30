@@ -2,23 +2,23 @@
   "streams": [
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (2h 18m • 976 MB)\nجلسة تركيز قصوى لمدة ساعتين بالوقت الفعلي أثناء تقديم اختبار كلية الطب بدون موسيقى.",
-      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_yyqQJD1PMrA_1080p.mp4",
+      "title": "⚡ بث مباشر فوري 1080p Full HD • صوت 48kHz صافي بدون تقطيع (2h 01m • 1006 MB)\nجلسة مذاكرة لمدة ساعتين مع موسيقى هادئة تساعد على التركيز العميق.",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_yyqQJD1PMrA_1080p_48k.mp4",
       "behaviorHints": {
         "notWebReady": false,
         "bingeGroup": "kharma-1080p-yyqQJD1PMrA",
-        "filename": "kharma_yyqQJD1PMrA_1080p.mp4",
-        "videoSize": 1023093259
+        "filename": "kharma_yyqQJD1PMrA_1080p_48k.mp4",
+        "videoSize": 1054662467
       }
     },
     {
       "name": "Nuvio Player\nYouTube HD",
-      "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (2h 18m)\nREAL TIME Study With Me (no music): 2 HOUR Medical School Exam | KharmaMedic",
+      "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (2h 01m)\nREAL TIME study with me (with music): 2 HOUR Productive Pomodoro Session | KharmaMedic",
       "ytId": "yyqQJD1PMrA"
     },
     {
       "name": "YouTube App",
-      "title": "📱 فتح في تطبيق يوتيوب الخارجي (2h 18m)\nhttps://www.youtube.com/watch?v=yyqQJD1PMrA",
+      "title": "📱 فتح في تطبيق يوتيوب الخارجي (2h 01m)\nhttps://www.youtube.com/watch?v=yyqQJD1PMrA",
       "externalUrl": "https://www.youtube.com/watch?v=yyqQJD1PMrA"
     }
   ]

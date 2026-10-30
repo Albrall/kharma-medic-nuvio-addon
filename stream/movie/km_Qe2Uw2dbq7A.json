@@ -2,23 +2,23 @@
   "streams": [
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (3h 25m • 1.07 GB)\nجلسة مذاكرة مركزة لمدة 3 ساعات ونصف (نسخة 2024) بدون موسيقى بنظام بومودورو.",
-      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_Qe2Uw2dbq7A_1080p.mp4",
+      "title": "⚡ بث مباشر فوري 1080p Full HD • صوت 48kHz صافي بدون تقطيع (3h 02m • 1.11 GB)\nجلسة مذاكرة لمدة 3 ساعات متواصلة بنظام بومودورو (50/10) بدون موسيقى.",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_Qe2Uw2dbq7A_1080p_48k.mp4",
       "behaviorHints": {
         "notWebReady": false,
         "bingeGroup": "kharma-1080p-Qe2Uw2dbq7A",
-        "filename": "kharma_Qe2Uw2dbq7A_1080p.mp4",
-        "videoSize": 1147515321
+        "filename": "kharma_Qe2Uw2dbq7A_1080p_48k.mp4",
+        "videoSize": 1191041228
       }
     },
     {
       "name": "Nuvio Player\nYouTube HD",
-      "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (3h 25m)\nREAL TIME Study with me (no music): 3 Hour Productive Pomodoro Session | KharmaMedic",
+      "title": "▶️ تشغيل داخل مشغل Nuvio الداخلي (3h 02m)\nREAL TIME study with me (no music): 3 HOUR Productive Pomodoro Session | KharmaMedic",
       "ytId": "Qe2Uw2dbq7A"
     },
     {
       "name": "YouTube App",
-      "title": "📱 فتح في تطبيق يوتيوب الخارجي (3h 25m)\nhttps://www.youtube.com/watch?v=Qe2Uw2dbq7A",
+      "title": "📱 فتح في تطبيق يوتيوب الخارجي (3h 02m)\nhttps://www.youtube.com/watch?v=Qe2Uw2dbq7A",
       "externalUrl": "https://www.youtube.com/watch?v=Qe2Uw2dbq7A"
     }
   ]

@@ -2,13 +2,13 @@
   "streams": [
     {
       "name": "Direct 1080p ⚡\nXbox & iPad",
-      "title": "⚡ بث مباشر فوري 1080p Full HD بدون تقطيع (5h 44m • 1.66 GB)\nجلسة مذاكرة حديثة لمدة 5 ساعات و44 دقيقة بدون موسيقى بنظام بومودورو مع د. ناصر.",
-      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_jnOIlmmVraE_1080p.mp4",
+      "title": "⚡ بث مباشر فوري 1080p Full HD • صوت 48kHz صافي بدون تقطيع (5h 44m • 1.73 GB)\nجلسة مذاكرة حديثة لمدة 5 ساعات و44 دقيقة بدون موسيقى بنظام بومودورو مع د. ناصر.",
+      "url": "https://github.com/Albrall/kharma-medic-nuvio-addon/releases/download/v2.0-1080p/kharma_jnOIlmmVraE_1080p_48k.mp4",
       "behaviorHints": {
         "notWebReady": false,
         "bingeGroup": "kharma-1080p-jnOIlmmVraE",
-        "filename": "kharma_jnOIlmmVraE_1080p.mp4",
-        "videoSize": 1783169316
+        "filename": "kharma_jnOIlmmVraE_1080p_48k.mp4",
+        "videoSize": 1856292584
       }
     },
     {
